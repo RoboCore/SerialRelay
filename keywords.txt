@@ -1,0 +1,9 @@
+
+SerialRelay	KEYWORD1
+
+GetState	KEYWORD2
+Info	KEYWORD2
+SetModule	KEYWORD2
+SetRelay	KEYWORD2
+Write	KEYWORD2
+
