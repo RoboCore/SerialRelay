@@ -2,8 +2,8 @@
 #define RC_SERIAL_RELAY_H
 
 /*
-	RoboCore Serial Relay Library
-		(v1.0 - 20/05/2015)
+	   RoboCore Serial Relay Library
+		    (v1.0 - 20/05/2015)
 
   Serial Relay functions for Arduino
     (tested with Arduino 1.0.1)

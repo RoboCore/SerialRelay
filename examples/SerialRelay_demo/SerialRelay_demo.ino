@@ -4,7 +4,20 @@
 
   Written by François.
   
-  Examples of how to use the Serial Relay library.
+  Example of how to use the Serial Relay library.
+  Control the state of the relay on a module or
+  the state of all the relays in one module.
+  End all serial commands with the '#' character:
+    - '+x' >> turn ON relay X on active module;
+    - '-x' >> turn OFF relay X on active module;
+    - 'my' >> select module Y;
+    - 'My' >>   "       "
+    - 'HH' >> set the state of all the relays
+              on the active module. HH must be
+              replaced by a valid hexadecimal
+              value (00 to FF).
+    ! acceptable values for X are 1 to 8
+    ! acceptable values for Y are 1 to 9
   
   
   Note: this example requires the String Functions
@@ -20,7 +33,7 @@
 #include "SerialRelay.h"
 
 
-SerialRelay relays(4,5,8); // (data, clock)
+SerialRelay relays(4,5,8); // (data, clock, number of modules)
 byte module = 1;
 
 #define BUFFER_SIZE 3
