@@ -89,14 +89,20 @@ class SerialRelay {
     
 #ifdef SERIAL_RELAY_DEBUG
     // Print all information
-    void Info(HardwareSerial *stream){
+    void Info(HardwareSerial *stream, byte format = HEX){
       stream->print("Qty:");
       stream->println(_module_qty);
       for(int i=0 ; i < _module_qty ; i++){
         stream->print('[');
         stream->print(i+1);
-        stream->print("] - 0x");
-        stream->println(_data[i], HEX);
+        stream->print("] - ");
+        if(format == HEX)
+          stream->print("0x");
+        else if(format == BIN)
+          stream->print("0b");
+        else if(format == OCT)
+          stream->print('0');
+        stream->println(_data[i], format);
       }
     }
 #endif

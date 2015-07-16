@@ -21,7 +21,7 @@ SerialRelay relays(4,5,NumModules); // (data, clock, number of modules)
 
 void setup(){
   Serial.begin(19200);
-  relays.Info(&Serial);
+  relays.Info(&Serial,BIN);
   Serial.println();
 }
 
