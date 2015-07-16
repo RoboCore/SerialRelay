@@ -1,9 +1,4 @@
-/*
-  Blink
-  Turns on an LED on for one second, then off for one second, repeatedly.
- 
-  This example code is in the public domain.
- */
+
 /*
       RoboCore - Serial Relay example
                     (16/07/2015)
@@ -18,7 +13,8 @@
 
 #include <SerialRelay.h>
 
-SerialRelay relays(4,5,1); // (data, clock, number of modules)
+const byte NumModules = 1;
+SerialRelay relays(4,5,NumModules); // (data, clock, number of modules)
 
 // the setup routine runs once when you press reset:
 void setup() {
