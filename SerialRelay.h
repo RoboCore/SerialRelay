@@ -197,6 +197,7 @@ class SerialRelay {
           mask >>= 1; // update mask
         }
       } while(module_number > 0);
+      digitalWrite(_pinData, LOW); // reset to maintain LOW level when not in use
       
       _tosend = false; // reset
     }
